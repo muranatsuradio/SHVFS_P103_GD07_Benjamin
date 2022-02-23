@@ -66,7 +66,7 @@ public class TeamPointSystem : Singleton<TeamPointSystem>
         {
             team.Point += points;
         }
-        Debug.Log($"Team : {team.ID}  || Points : {team.Point}");
+        //Debug.Log($"Team : {team.ID}  || Points : {team.Point}");
     }
     private void AssignPoints()
     {
