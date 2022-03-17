@@ -11,7 +11,7 @@ public class TeamPointSystem : Singleton<TeamPointSystem>
     public int MaxTeamPoints = 10;
     public int TickPoint = 1;
     public float TickTime = 1.0f;
-    private float m_curTime = 0.0f;
+    private float _curTime = 0.0f;
 
     public override void Awake()
     {
@@ -26,15 +26,17 @@ public class TeamPointSystem : Singleton<TeamPointSystem>
             Zones.Add(zone);
         }
     }
+    
     private void Update()
     {
-        if (m_curTime >= TickTime)
+        if (_curTime >= TickTime)
         {
             AssignPoints();
-            m_curTime = .0f;
+            _curTime = .0f;
         }
-        m_curTime += Time.deltaTime;
+        _curTime += Time.deltaTime;
     }
+    
     public void RemoveMember(TeamMemberComponent member)
     {
         var team = Teams.Find(team => team.ID == member.TeamID);
@@ -44,6 +46,7 @@ public class TeamPointSystem : Singleton<TeamPointSystem>
             team.Members.Remove(member);
         }
     }
+    
     public void AddMember(TeamMemberComponent member)
     {
         if (!Teams.Any(team => team.ID.Equals(member.TeamID)))
@@ -58,6 +61,7 @@ public class TeamPointSystem : Singleton<TeamPointSystem>
             team.Members.Add(member);
         }
     }
+    
     public void AcquireTeamPoints(int points, int teamNum)
     {
         var team = Teams.Find(team => team.ID == teamNum);
@@ -68,6 +72,7 @@ public class TeamPointSystem : Singleton<TeamPointSystem>
         }
         //Debug.Log($"Team : {team.ID}  || Points : {team.Point}");
     }
+    
     private void AssignPoints()
     {
         foreach (var zone in Zones)
@@ -79,17 +84,20 @@ public class TeamPointSystem : Singleton<TeamPointSystem>
         }
     }
 }
+
 [System.Serializable]
 public class Team
 {
     public int ID;
     public int Point = 0;
     public List<TeamMemberComponent> Members;
+    
     public Team(int id, List<TeamMemberComponent> members)
     {
         ID = id;
         Members = members;
     }
+    
     public Team(int id, TeamMemberComponent member)
     {
         ID = id;

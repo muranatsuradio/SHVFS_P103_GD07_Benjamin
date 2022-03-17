@@ -16,72 +16,73 @@ public class PlayerInputComponent : MonoBehaviour
     public float LookSpeed;
     public Transform CameraContainer;
 
-    private const float M_RAYLENGTH = 1.2f;
+    private const float _RAYLENGTH = 1.2f;
 
-    private Rigidbody m_rigidbody;
-    private Animator m_animator;
+    private Rigidbody _rigidbody;
+    private Animator _animator;
 
-    private Vector3 m_processedMoveInput;
-    private float m_processedTurnInput;
-    private float m_processedLookInput;
+    private Vector3 _processedMoveInput;
+    private float _processedTurnInput;
+    private float _processedLookInput;
 
-    private float m_rotateSpeed = 60.0f;
-    private bool m_isJumping;
+    private float _rotateSpeed = 60.0f;
+    private bool _isJumping;
 
     private void Start()
     {
-        m_rigidbody = GetComponent<Rigidbody>();
-        m_animator = GetComponentInChildren<Animator>();
+        _rigidbody = GetComponent<Rigidbody>();
+        _animator = GetComponentInChildren<Animator>();
     }
+    
     private void Update()
     {
         //Cursor.lockState = CursorLockMode.Locked;
         var rightInput = Input.GetAxis("Horizontal");
         var forwardInput = Input.GetAxis("Vertical");
 
-
         var isGrounded = IsGrounded();
 
-        m_processedTurnInput = Input.GetAxis("Mouse X");
-        m_processedLookInput = -Input.GetAxis("Mouse Y");
-
+        _processedTurnInput = Input.GetAxis("Mouse X");
+        _processedLookInput = -Input.GetAxis("Mouse Y");
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            m_isJumping = true;
+            _isJumping = true;
         }
 
-        m_processedMoveInput = transform.forward * forwardInput + transform.right * rightInput;
-        m_processedMoveInput = m_processedMoveInput.magnitude >= 1 ? m_processedMoveInput.normalized : m_processedMoveInput;
+        _processedMoveInput = transform.forward * forwardInput + transform.right * rightInput;
+        _processedMoveInput = _processedMoveInput.magnitude >= 1 ? _processedMoveInput.normalized : _processedMoveInput;
 
-        CameraContainer.Rotate(new Vector3(m_processedLookInput, .0f, .0f) * LookSpeed * Time.deltaTime);
+        CameraContainer.Rotate(new Vector3(_processedLookInput, .0f, .0f) * LookSpeed * Time.deltaTime);
 
-        if (m_animator)
+        if (_animator)
         {
-            m_animator.SetFloat("HorizontalInput", rightInput);
-            m_animator.SetFloat("VerticalInput", forwardInput);
-            m_animator.SetBool("IsJumping", !isGrounded);
+            _animator.SetFloat("HorizontalInput", rightInput);
+            _animator.SetFloat("VerticalInput", forwardInput);
+            _animator.SetBool("IsJumping", !isGrounded);
         }
     }
+    
     private void FixedUpdate()
     {
+        _rigidbody.MoveRotation(Quaternion.Euler(transform.eulerAngles + (Vector3.up * _processedTurnInput) * Time.fixedDeltaTime * _rotateSpeed));
 
-        m_rigidbody.MoveRotation(Quaternion.Euler(transform.eulerAngles + (Vector3.up * m_processedTurnInput) * Time.fixedDeltaTime * m_rotateSpeed));
-
-        if (m_isJumping)
+        if (_isJumping)
         {
-            m_rigidbody.velocity = new Vector3(m_rigidbody.velocity.x, 0, m_rigidbody.velocity.z);
-            m_rigidbody.AddForce(JumpHeight * Vector3.up, ForceMode.Impulse);
-            m_isJumping = false;
+            _rigidbody.velocity = new Vector3(_rigidbody.velocity.x, 0, _rigidbody.velocity.z);
+            _rigidbody.AddForce(JumpHeight * Vector3.up, ForceMode.Impulse);
+            _isJumping = false;
         }
-        m_rigidbody.MovePosition(transform.position + m_processedMoveInput * MovementSpeed * Time.fixedDeltaTime);
+        
+        _rigidbody.MovePosition(transform.position + _processedMoveInput * MovementSpeed * Time.fixedDeltaTime);
     }
+    
     private bool IsGrounded()
     {
-        Debug.DrawRay(transform.position, Vector3.down * M_RAYLENGTH, Color.red);
-        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit raycastHit, M_RAYLENGTH))
+        Debug.DrawRay(transform.position, Vector3.down * _RAYLENGTH, Color.red);
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit raycastHit, _RAYLENGTH))
         {
-            if (raycastHit.collider.gameObject.tag == "Ground")
+            if (raycastHit.collider.gameObject.CompareTag("Ground"))
             {
                 return true;
             }

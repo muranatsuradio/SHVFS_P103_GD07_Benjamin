@@ -274,10 +274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccedc56496a70e242a0433791d4e549e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackGUIDComponent: {fileID: 0}
+  AttackGUIDComponent: {fileID: 1224393822}
   Attacker: {fileID: 3608280279220299694}
   AttackActiveTime: 1
-  AttackPower: 0
+  AttackPower: 100
 --- !u!54 &964838378
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -326,6 +326,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TeamID: 0
   ControllingZone: {fileID: 0}
+--- !u!114 &1224393822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479840941716860295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b22610e9e7739eb44ac7e4922b4b832d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1224393823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479840941716860295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ac6ebd3fd99ac4f91c77cdccf54b2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackGUIDComponent: {fileID: 1224393822}
 --- !u!1 &3608280279220299694
 GameObject:
   m_ObjectHideFlags: 0

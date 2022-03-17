@@ -5,7 +5,7 @@ using UnityEngine;
 public class Singleton<T> : MonoBehaviour where T : Singleton<T>
 {
     // Private Field of Type T
-    private static T instance = null;
+    private static T _instance = null;
 
     // Public Property of Type T
     // What other components will access
@@ -14,22 +14,23 @@ public class Singleton<T> : MonoBehaviour where T : Singleton<T>
         //Public Getter
         get
         {
-            if (instance != null) return instance;
+            if (_instance != null) return _instance;
 
-            instance = FindObjectOfType<T>();
+            _instance = FindObjectOfType<T>();
 
-            if (instance == null)
+            if (_instance == null)
             {
-                instance = new GameObject(typeof(T).Name).AddComponent<T>();
+                _instance = new GameObject(typeof(T).Name).AddComponent<T>();
             }
 
-            DontDestroyOnLoad(instance.gameObject);
+            DontDestroyOnLoad(_instance.gameObject);
 
-            return instance;
+            return _instance;
         }
     }
+    
     public virtual void Awake()
     {
-        if (instance != null) Destroy(gameObject);
+        if (_instance != null) Destroy(gameObject);
     }
 }
