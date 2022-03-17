@@ -16,7 +16,7 @@ public class PlayerInputComponent : MonoBehaviour
     public float LookSpeed;
     public Transform CameraContainer;
 
-    private const float _RAYLENGTH = 1.2f;
+    private const float _RAYLENGTH = 0.2f;
 
     private Rigidbody _rigidbody;
     private Animator _animator;
