@@ -2956,7 +2956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2083544534}
   m_Layer: 2
-  m_Name: CameraContainer
+  m_Name: Camera Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3293,15 +3293,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1479840940320813795}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a7c4e9beee584449dedd89f39a198c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ffc3aa96b4318842a57b945405b33a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 5
-  JumpHeight: 5
-  RayOffsetX: 0
-  RayOffsetY: 0
-  LookSpeed: 2
-  CameraContainer: {fileID: 2083544534}
+  MoveSpeed: 2
 --- !u!136 &1479840940320813807
 CapsuleCollider:
   m_ObjectHideFlags: 0

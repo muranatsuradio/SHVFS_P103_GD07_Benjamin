@@ -5,14 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc5a8265-8057-42d2-a3a6-cf63e32f92de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerInputComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerInputComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Singleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/TeamPointSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/TeamPointSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/HDRPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/Idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/Idle.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/RunBwd.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/RunBwd.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/RunBwd_original.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/RunBwd_original.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/RunFwd.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/RunFwd.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/RunLeft.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/RunLeft.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/RunRight.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/RunRight.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/WalkBwd.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/WalkBwd.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/WalkFwd.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/WalkFwd.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/WalkLeft_89.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/WalkLeft_89.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/WalkRight_91.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/Female/WalkRight_91.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/AttackGUIDComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/AttackGUIDComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/AttackableComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/AttackableComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/AttackerComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/AttackerComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/PlayerInputComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/PlayerInputComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/TeamMemberComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/TeamMemberComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/TeamPointSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/TeamPointSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/ZoneComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Class/ZoneComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +95,8 @@
       <updated>1647510454250</updated>
       <workItem from="1647510468981" duration="2601000" />
       <workItem from="1647517143736" duration="1168000" />
+      <workItem from="1647614483645" duration="4000" />
+      <workItem from="1647614527928" duration="1815000" />
     </task>
     <servers />
   </component>
