@@ -1,18 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInputSystem : MonoBehaviour
+public class PlayerInputSystem : Singleton<PlayerInputSystem>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool CanPlayerInput = true;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        CanPlayerInput = true;
     }
 }
