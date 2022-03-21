@@ -6,19 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dc5a8265-8057-42d2-a3a6-cf63e32f92de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PersistantShootBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PersistantShootBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ShootBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ShootBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnequipGunBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnequipGunBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/PlayerTeddy/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/PlayerTeddy/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerMoveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerMoveComponent.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +16,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerRotateComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/UnequipGunBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/ShootBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/ShootBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -90,7 +81,7 @@
       <workItem from="1647700088457" duration="47000" />
       <workItem from="1647700173471" duration="5078000" />
       <workItem from="1647871559189" duration="535000" />
-      <workItem from="1647872124575" duration="595000" />
+      <workItem from="1647872124575" duration="4041000" />
     </task>
     <servers />
   </component>

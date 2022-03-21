@@ -29,12 +29,18 @@ public class PlayerMoveComponent : MonoBehaviour
         var forwardInput = Input.GetAxis("Vertical");
         var playerTransform = transform;
 
-        _playerMoveInput = rightInput * playerTransform.right + forwardInput * playerTransform.forward;
+        _playerMoveInput = rightInput * Vector3.right + forwardInput * Vector3.forward;
         _playerMoveInput = _playerMoveInput.magnitude > 1 ? _playerMoveInput.normalized : _playerMoveInput;
 
         if (!_animator) return;
-        _animator.SetFloat(RightVelocity, rightInput);
-        _animator.SetFloat(ForwardVelocity, forwardInput);
+        
+        var rightInputToX = Vector3.Project(rightInput * Vector3.right, transform.right).magnitude;
+        var rightInputToZ = Vector3.Project(rightInput * Vector3.right, transform.forward).magnitude;
+        var forwardInputToX = Vector3.Project(forwardInput * Vector3.forward, transform.right).magnitude;
+        var forwardInputToZ = Vector3.Project(forwardInput * Vector3.forward, transform.forward).magnitude;
+        
+        _animator.SetFloat(RightVelocity, rightInputToX + forwardInputToX);
+        _animator.SetFloat(ForwardVelocity, rightInputToZ + forwardInputToZ);
     }
 
     private void FixedUpdate()
