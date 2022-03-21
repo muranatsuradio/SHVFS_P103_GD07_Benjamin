@@ -11,7 +11,6 @@ public class PlayerShootComponent : MonoBehaviour
 
     private static readonly int IsEquipGun = Animator.StringToHash("IsEquipGun");
     private static readonly int IsShoot = Animator.StringToHash("IsShoot");
-    private static readonly int IsHoldShoot = Animator.StringToHash("IsHoldShoot");
 
     private void Start()
     {
@@ -22,13 +21,11 @@ public class PlayerShootComponent : MonoBehaviour
     {
         if (!PlayerInputSystem.Instance.CanPlayerInput) return;
 
-        if (Input.GetMouseButtonDown(0) && !_isEquipGun)
+        if (Input.GetKeyDown(KeyCode.E) && !_isEquipGun)
         {
             _isEquipGun = !_isEquipGun;
             _animator.SetBool(IsEquipGun, _isEquipGun);
         }
-
-        _animator.SetBool(IsHoldShoot, Input.GetMouseButton(0));
 
         if (!_isEquipGun) return;
 
