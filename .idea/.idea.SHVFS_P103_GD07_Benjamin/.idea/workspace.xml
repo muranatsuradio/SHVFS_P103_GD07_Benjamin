@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="dc5a8265-8057-42d2-a3a6-cf63e32f92de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/PlayerTeddy/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/PlayerTeddy/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HDRPDefaultResources/InputSystem.inputsettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HDRPDefaultResources/InputSystem.inputsettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerMoveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerMoveComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SampleSceneAssets/PistolAnimsetPro/Animations/PistolAnimsetPro.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SampleSceneAssets/PistolAnimsetPro/Animations/PistolAnimsetPro.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +21,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerRotateComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/UnequipGunBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/ShootBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/UnequipGunBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerRotateComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/ShootBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,7 +46,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="rider.run.widget.enabled.cache" value="false" />
-    <property name="settings.editor.selected.configurable" value="ReSpellerSettingsId" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -82,6 +87,7 @@
       <workItem from="1647700173471" duration="5078000" />
       <workItem from="1647871559189" duration="535000" />
       <workItem from="1647872124575" duration="4041000" />
+      <workItem from="1647949105552" duration="4661000" />
     </task>
     <servers />
   </component>

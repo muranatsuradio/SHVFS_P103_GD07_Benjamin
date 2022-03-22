@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMoveComponent : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class PlayerMoveComponent : MonoBehaviour
     private void Update()
     {
         if (!PlayerInputSystem.Instance.CanPlayerInput) return;
-
+        
         var rightInput = Input.GetAxis("Horizontal");
         var forwardInput = Input.GetAxis("Vertical");
         var playerTransform = transform;
@@ -34,13 +35,22 @@ public class PlayerMoveComponent : MonoBehaviour
 
         if (!_animator) return;
         
-        var rightInputToX = Vector3.Project(rightInput * Vector3.right, transform.right).magnitude;
-        var rightInputToZ = Vector3.Project(rightInput * Vector3.right, transform.forward).magnitude;
-        var forwardInputToX = Vector3.Project(forwardInput * Vector3.forward, transform.right).magnitude;
-        var forwardInputToZ = Vector3.Project(forwardInput * Vector3.forward, transform.forward).magnitude;
+        var right = transform.right;
+        var forward = transform.forward;
         
-        _animator.SetFloat(RightVelocity, rightInputToX + forwardInputToX);
-        _animator.SetFloat(ForwardVelocity, rightInputToZ + forwardInputToZ);
+        var xInputToRight = Vector3.Project(rightInput * Vector3.right, right);
+        var xInputToForward = Vector3.Project(rightInput * Vector3.right, forward);
+        var zInputToRight = Vector3.Project(forwardInput * Vector3.forward, right);
+        var zInputToForward = Vector3.Project(forwardInput * Vector3.forward, forward);
+
+        var rightVector = xInputToRight + zInputToRight;
+        var forwardVector = xInputToForward + zInputToForward;
+
+        var rightVelocity = rightVector.magnitude * Mathf.Cos(Vector3.Angle(rightVector, right));
+        var forwardVelocity = forwardVector.magnitude * Mathf.Cos(Vector3.Angle(forwardVector, forward));
+        
+        _animator.SetFloat(RightVelocity, rightVelocity);
+        _animator.SetFloat(ForwardVelocity, forwardVelocity);
     }
 
     private void FixedUpdate()

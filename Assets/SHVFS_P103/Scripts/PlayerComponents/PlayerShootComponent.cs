@@ -21,7 +21,7 @@ public class PlayerShootComponent : MonoBehaviour
     {
         if (!PlayerInputSystem.Instance.CanPlayerInput) return;
 
-        if (Input.GetKeyDown(KeyCode.E) && !_isEquipGun)
+        if (Input.GetKeyDown(KeyCode.E))
         {
             _isEquipGun = !_isEquipGun;
             _animator.SetBool(IsEquipGun, _isEquipGun);
