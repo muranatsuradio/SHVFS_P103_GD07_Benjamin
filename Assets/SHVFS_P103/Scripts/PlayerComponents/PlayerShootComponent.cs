@@ -11,6 +11,7 @@ public class PlayerShootComponent : MonoBehaviour
 
     private static readonly int IsEquipGun = Animator.StringToHash("IsEquipGun");
     private static readonly int IsShoot = Animator.StringToHash("IsShoot");
+    private static readonly int IsAiming = Animator.StringToHash("IsAiming");
 
     private void Start()
     {
@@ -27,6 +28,8 @@ public class PlayerShootComponent : MonoBehaviour
             _animator.SetBool(IsEquipGun, _isEquipGun);
         }
 
+        _animator.SetBool(IsAiming, Input.GetMouseButton(1));
+        
         if (!_isEquipGun) return;
 
         _animator.SetBool(IsShoot, Input.GetMouseButtonDown(0));
