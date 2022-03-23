@@ -8,8 +8,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/PlayerTeddy/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/PlayerTeddy/Player.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/AimBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/AimBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/EquipGunBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/EquipGunBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/ShootBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/ShootBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/UnequipGunBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/UnequipGunBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerMoveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerMoveComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Systems/PlayerInputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Systems/PlayerInputSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Weapons/PistolRayRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Weapons/PistolRayRenderer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +92,7 @@
       <workItem from="1647872124575" duration="4041000" />
       <workItem from="1647949105552" duration="4661000" />
       <workItem from="1647961697949" duration="2382000" />
+      <workItem from="1648044466835" duration="2819000" />
     </task>
     <servers />
   </component>

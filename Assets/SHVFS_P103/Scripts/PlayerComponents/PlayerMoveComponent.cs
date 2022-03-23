@@ -22,15 +22,11 @@ public class PlayerMoveComponent : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _animator = GetComponentInChildren<Animator>();
-
-        _canMove = true;
     }
 
     private void Update()
     {
-        if (!PlayerInputSystem.Instance.CanPlayerInput) return;
-
-        if (!_canMove) return;
+        if (!PlayerInputSystem.Instance.CanPlayerMove) return;
         
         var rightInput = Input.GetAxis("Horizontal");
         var forwardInput = Input.GetAxis("Vertical");
@@ -61,17 +57,16 @@ public class PlayerMoveComponent : MonoBehaviour
     private void FixedUpdate()
     {
         if (!_rigidbody) return;
-
-        if (!_canMove) return;
-
+        
         _rigidbody.MovePosition(transform.position + _playerMoveInput * MoveSpeed * Time.fixedDeltaTime);
 
-        if (PlayerInputSystem.Instance.CanPlayerInput) return;
+        if (PlayerInputSystem.Instance.CanPlayerMove) return;
+        
         _rigidbody.MovePosition(transform.position);
     }
 
-    public void SetPlayerCanMove(bool canMove)
+    public static void SetPlayerCanMove(bool canMove)
     {
-        _canMove = canMove;
+        PlayerInputSystem.Instance.CanPlayerMove = canMove;
     }
 }

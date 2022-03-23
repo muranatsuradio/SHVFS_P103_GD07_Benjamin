@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class AimBehaviour : StateMachineBehaviour
 {
-    private PlayerMoveComponent _playerMoveComponent;
-
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _playerMoveComponent = animator.GetComponentInParent<PlayerMoveComponent>();
-
-        if (!_playerMoveComponent) return;
-
-        _playerMoveComponent.SetPlayerCanMove(false);
+        PlayerMoveComponent.SetPlayerCanMove(false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -25,9 +19,7 @@ public class AimBehaviour : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (!_playerMoveComponent) return;
-        
-        _playerMoveComponent.SetPlayerCanMove(true);
+        PlayerMoveComponent.SetPlayerCanMove(true);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

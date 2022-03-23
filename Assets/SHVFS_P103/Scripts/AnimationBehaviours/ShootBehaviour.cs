@@ -7,7 +7,8 @@ public class ShootBehaviour : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        PlayerInputSystem.Instance.CanPlayerInput = false;
+        PlayerInputSystem.Instance.CanPlayerInteract = false;
+        PlayerMoveComponent.SetPlayerCanMove(false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -19,7 +20,7 @@ public class ShootBehaviour : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        PlayerInputSystem.Instance.CanPlayerInput = true;
+        PlayerInputSystem.Instance.CanPlayerInteract = true;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

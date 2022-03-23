@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class PlayerInputSystem : Singleton<PlayerInputSystem>
 {
-    public bool CanPlayerInput = true;
+    public bool CanPlayerInteract = true;
+    public bool CanPlayerMove = true;
 
     private void Start()
     {
-        CanPlayerInput = true;
+        CanPlayerInteract = true;
+        CanPlayerMove = true;
     }
 }
