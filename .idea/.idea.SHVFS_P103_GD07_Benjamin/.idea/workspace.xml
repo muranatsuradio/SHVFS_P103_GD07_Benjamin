@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dc5a8265-8057-42d2-a3a6-cf63e32f92de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/PlayerTeddy/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/PlayerTeddy/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Prefabs/Pistol.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Prefabs/Pistol.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/ShootBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/ShootBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerMoveComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerMoveComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Weapons/PistolRayRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Weapons/PistolRayRenderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Enemy/EnemySimpleAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Enemy/EnemySimpleAI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +84,9 @@
       <workItem from="1647949105552" duration="4661000" />
       <workItem from="1647961697949" duration="2382000" />
       <workItem from="1648044466835" duration="2819000" />
-      <workItem from="1648097077938" duration="10281000" />
+      <workItem from="1648097077938" duration="11631000" />
+      <workItem from="1648109533527" duration="114000" />
+      <workItem from="1648116205928" duration="290000" />
     </task>
     <servers />
   </component>
