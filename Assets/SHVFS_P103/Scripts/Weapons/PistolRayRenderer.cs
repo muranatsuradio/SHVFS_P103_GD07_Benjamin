@@ -21,6 +21,7 @@ public class PistolRayRenderer : MonoBehaviour
 
     private void Update()
     {
+        if (!_lineRenderer.enabled) return;
         UpdateLineRenderer();
     }
 
@@ -39,5 +40,11 @@ public class PistolRayRenderer : MonoBehaviour
         RayImpact.SetActive(isHit);
         if (!isHit) return;
         RayImpact.transform.position = hitInfo.point;
+    }
+
+    public void SetLineRendererActive(bool isActive)
+    {
+        _lineRenderer.enabled = isActive;
+        RayImpact.SetActive(isActive);
     }
 }

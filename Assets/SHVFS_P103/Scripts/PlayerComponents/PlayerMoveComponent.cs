@@ -6,8 +6,9 @@ using UnityEngine.Serialization;
 
 public class PlayerMoveComponent : MonoBehaviour
 {
-    public float MoveSpeed = 2f;
-
+    public const float MAX_SPEED = 3f;
+    public float MoveSpeed = MAX_SPEED;
+    
     private Rigidbody _rigidbody;
     private Animator _animator;
 
@@ -27,7 +28,7 @@ public class PlayerMoveComponent : MonoBehaviour
     private void Update()
     {
         if (!PlayerInputSystem.Instance.CanPlayerMove) return;
-        
+
         var rightInput = Input.GetAxis("Horizontal");
         var forwardInput = Input.GetAxis("Vertical");
 
@@ -61,7 +62,7 @@ public class PlayerMoveComponent : MonoBehaviour
         _rigidbody.MovePosition(transform.position + _playerMoveInput * MoveSpeed * Time.fixedDeltaTime);
 
         if (PlayerInputSystem.Instance.CanPlayerMove) return;
-        
+
         _rigidbody.MovePosition(transform.position);
     }
 

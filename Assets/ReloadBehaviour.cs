@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootBehaviour : StateMachineBehaviour
+public class ReloadBehaviour : StateMachineBehaviour
 {
-    private static readonly int IsShoot = Animator.StringToHash("IsShoot");
+    private static readonly int IsReload = Animator.StringToHash("IsReload");
+    private static readonly int IsAiming = Animator.StringToHash("IsAiming");
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.SetBool(IsReload,false);
+        animator.SetBool(IsAiming,false);
+        animator.GetComponentInChildren<PistolRayRenderer>().SetLineRendererActive(false);
         PlayerInputSystem.Instance.CanPlayerInteract = false;
-        PlayerMoveComponent.SetPlayerCanMove(false);
+        PlayerInputSystem.Instance.CanPlayerMove = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -23,7 +27,6 @@ public class ShootBehaviour : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         PlayerInputSystem.Instance.CanPlayerInteract = true;
-        animator.SetBool(IsShoot, false);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
