@@ -23,29 +23,127 @@ public class EnemySimpleAI : MonoBehaviour
     public Transform StartPatrolPosition;
     public Transform EndPatrolPosition;
     public float MinDistance = 1.5f;
-    
-    private Vector3 _currentPatrolDestination;
+
+    public float AggroRadius = 5.0f;
+    public float MeleeRadius = 1.5f;
+
+    private float _attackCoolDown;
+    private const float _ATTACK_COOL_DOWN = 1.2f;
+
+    private Vector3 _currentDestination;
     private NavMeshAgent _navMeshAgent;
+
+    private GameObject _playerGameObject;
+
+    private EnemyStatusComponent _enemyStatus;
 
     private void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
+
+        _currentDestination = StartPatrolPosition.position;
+
+        _playerGameObject = GameObject.FindGameObjectWithTag("Player");
+
+        _enemyStatus = GetComponent<EnemyStatusComponent>();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(1, 0, 0, 0.25f);
+        Gizmos.DrawSphere(transform.position, AggroRadius);
+    }
+
+    private void Update()
+    {
+        switch (EnemyState)
+        {
+            case EnemyState.Idle:
+                SearchForPlayer();
+                break;
+            case EnemyState.Patrol:
+                SearchForPlayer();
+                Patrol();
+                break;
+            case EnemyState.Chase:
+                ChasePlayer();
+                break;
+            case EnemyState.Attack:
+                break;
+            case EnemyState.Stunned:
+                break;
+            case EnemyState.Attracted:
+                break;
+            case EnemyState.Dead:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 
     private void Patrol()
     {
-        if (_navMeshAgent && _currentPatrolDestination != Vector3.zero)
+        if (!StartPatrolPosition || !EndPatrolPosition) return;
+
+        if (_navMeshAgent && _currentDestination != Vector3.zero)
         {
-            _navMeshAgent.SetDestination(_currentPatrolDestination);
+            _navMeshAgent.SetDestination(_currentDestination);
         }
 
-        var distance = Vector3.Distance(_currentPatrolDestination, transform.position);
-        
-        if (distance < MinDistance)
+        var distance = Vector3.Distance(_currentDestination, transform.position);
+
+        if (distance >= MinDistance) return;
+
+        _currentDestination = _currentDestination == EndPatrolPosition.position
+            ? StartPatrolPosition.position
+            : EndPatrolPosition.position;
+    }
+
+    private void ChasePlayer()
+    {
+        if (!_navMeshAgent || _currentDestination == Vector3.zero) return;
+
+        _currentDestination = _playerGameObject.transform.position;
+        _navMeshAgent.SetDestination(_currentDestination);
+
+        var distance = Vector3.Distance(transform.position, _currentDestination);
+
+        if (distance >= MinDistance)
         {
-            _currentPatrolDestination = _currentPatrolDestination == EndPatrolPosition.position
-                ? StartPatrolPosition.position
-                : EndPatrolPosition.position;
+            _navMeshAgent.isStopped = false;
+            return;
+        }
+
+        _navMeshAgent.isStopped = true;
+        _navMeshAgent.velocity = Vector3.zero;
+    }
+
+    private void SearchForPlayer()
+    {
+        var distance = Vector3.Distance(transform.position, _playerGameObject.transform.position);
+
+        if (distance >= AggroRadius) return;
+
+        EnemyState = EnemyState.Chase;
+    }
+
+    private void Attack()
+    {
+        
+    }
+
+    private void UpdateAttack()
+    {
+        var distance = Vector3.Distance(transform.position, _playerGameObject.transform.position);
+        if(distance >= MeleeRadius) return;
+
+        if (_attackCoolDown <= 0f)
+        {
+            var playerStatus = _playerGameObject.GetComponent<PlayerStatusComponent>();
+            if (_enemyStatus && playerStatus)
+            {
+                playerStatus.TakeDamage(_enemyStatus.Damage);
+            }
         }
     }
 }
