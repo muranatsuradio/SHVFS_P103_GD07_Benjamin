@@ -27,6 +27,8 @@ public class EnemySimpleAI : MonoBehaviour
     public float AggroRadius = 5.0f;
     public float MeleeRadius = 1.5f;
 
+    public bool IsAttacking = false;
+
     private float _attackCoolDown;
     private const float _ATTACK_COOL_DOWN = 1.2f;
 
@@ -69,6 +71,7 @@ public class EnemySimpleAI : MonoBehaviour
                 ChasePlayer();
                 break;
             case EnemyState.Attack:
+                UpdateAttack();
                 break;
             case EnemyState.Stunned:
                 break;
@@ -80,6 +83,8 @@ public class EnemySimpleAI : MonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
     }
+
+    #region EnemyAction
 
     private void Patrol()
     {
@@ -116,6 +121,7 @@ public class EnemySimpleAI : MonoBehaviour
 
         _navMeshAgent.isStopped = true;
         _navMeshAgent.velocity = Vector3.zero;
+        EnemyState = EnemyState.Attack;
     }
 
     private void SearchForPlayer()
@@ -127,23 +133,31 @@ public class EnemySimpleAI : MonoBehaviour
         EnemyState = EnemyState.Chase;
     }
 
-    private void Attack()
-    {
-        
-    }
-
     private void UpdateAttack()
     {
         var distance = Vector3.Distance(transform.position, _playerGameObject.transform.position);
-        if(distance >= MeleeRadius) return;
-
-        if (_attackCoolDown <= 0f)
+        if (distance >= MeleeRadius)
         {
-            var playerStatus = _playerGameObject.GetComponent<PlayerStatusComponent>();
-            if (_enemyStatus && playerStatus)
-            {
-                playerStatus.TakeDamage(_enemyStatus.Damage);
-            }
+            EnemyState = EnemyState.Chase;
+            IsAttacking = false;
+            return;
         }
+
+        _attackCoolDown -= Time.deltaTime;
+
+        if (!(_attackCoolDown <= 0f)) return;
+
+        var playerStatus = _playerGameObject.GetComponent<PlayerStatusComponent>();
+
+        if (_enemyStatus && playerStatus)
+        {
+            playerStatus.TakeDamage(_enemyStatus.Damage);
+        }
+
+        IsAttacking = true;
+        
+        _attackCoolDown = _ATTACK_COOL_DOWN;
     }
+
+    #endregion
 }
