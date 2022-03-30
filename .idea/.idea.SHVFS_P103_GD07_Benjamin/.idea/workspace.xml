@@ -6,20 +6,47 @@
   <component name="ChangeListManager">
     <list default="true" id="dc5a8265-8057-42d2-a3a6-cf63e32f92de" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SHVFS_P103_GD07_Benjamin/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/PlayerTeddy/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/PlayerTeddy/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/PlayerTeddy/PlayerTeddy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Animations/PlayerTeddy/PlayerTeddy.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Art/Models/UnityChan/Animations/unitychan_SLIDE00.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Art/Models/UnityChan/Animations/unitychan_SLIDE00.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Materials/ZoneControlMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Materials/ZoneControlMat.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scenes/Game/GameScene/NavMesh.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/BaseStatusComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/BaseStatusComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Enemy/EnemyAnimationComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Enemy/EnemyAnimationComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Enemy/EnemySimpleAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Enemy/EnemySimpleAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Enemy/EnemyStatusComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Enemy/EnemyStatusComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/EquipAnimationComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/EquipAnimationComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerRotateComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerRotateComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerStatusComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerStatusComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Systems/PlayerInputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Systems/PlayerInputSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Weapons/PistolRayRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Weapons/PistolRayRenderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Weapons/PistolShootComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/Weapons/PistolShootComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SampleSceneAssets/Settings/Volumes/VolumeGlobal.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SampleSceneAssets/Settings/Volumes/VolumeGlobal.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerRotateComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/UnequipGunBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/ShootBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerShootComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/UnequipGunBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/PlayerComponents/PlayerRotateComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SHVFS_P103/Scripts/AnimationBehaviours/ShootBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/531e906a5d9447dca62c95ab61ff1c26143c00/86/0231d44c/Object.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -92,6 +119,9 @@
       <workItem from="1648467713648" duration="4753000" />
       <workItem from="1648477607065" duration="205000" />
       <workItem from="1648477853751" duration="1020000" />
+      <workItem from="1648530217540" duration="471000" />
+      <workItem from="1648531684715" duration="21365000" />
+      <workItem from="1648624649285" duration="10620000" />
     </task>
     <servers />
   </component>

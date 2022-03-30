@@ -21,7 +21,9 @@ public class PlayerRotateComponent : MonoBehaviour
     private void Update()
     {
         if (!_mainCamera) return;
-        
+
+        if (!PlayerInputSystem.Instance.CanPlayerRotate) return;
+
         var mouseScreenPosition = Input.mousePosition;
         var playerScreenPosition = _mainCamera.WorldToScreenPoint(transform.position);
         

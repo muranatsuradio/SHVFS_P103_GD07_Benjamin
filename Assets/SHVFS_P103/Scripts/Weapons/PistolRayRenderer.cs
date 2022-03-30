@@ -9,6 +9,8 @@ public class PistolRayRenderer : MonoBehaviour
     public GameObject RayImpact;
     
     public float LineLength = 5f;
+
+    public PlayerShootComponent PlayerShootComponent;
     
     private LineRenderer _lineRenderer;
 
@@ -22,6 +24,12 @@ public class PistolRayRenderer : MonoBehaviour
     private void Update()
     {
         if (!_lineRenderer.enabled) return;
+
+        if (!PlayerShootComponent.IsEquip)
+        {
+            SetLineRendererActive(false);
+        }
+        
         UpdateLineRenderer();
     }
 

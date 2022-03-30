@@ -14,7 +14,9 @@ public class PlayerShootComponent : MonoBehaviour
 
     private Animator _animator;
 
-    private bool _isEquipGun = false;
+    public bool IsEquip = false;
+
+    private bool _isAiming = false;
 
     private static readonly int IsEquipGun = Animator.StringToHash("IsEquipGun");
     private static readonly int IsShoot = Animator.StringToHash("IsShoot");
@@ -36,22 +38,26 @@ public class PlayerShootComponent : MonoBehaviour
     {
         if (!PlayerInputSystem.Instance.CanPlayerInteract) return;
 
+        if (PlayerInputSystem.Instance.IsThrowRock) return;
+
+        if (!_animator) return;
+
         // Equip & Unequip
         if (Input.GetKeyDown(KeyCode.E))
         {
-            _isEquipGun = !_isEquipGun;
+            IsEquip = !IsEquip;
 
             _playerMoveComponent.MoveSpeed =
-                _isEquipGun ? PlayerMoveComponent.MAX_SPEED / 2 : PlayerMoveComponent.MAX_SPEED;
-            _animator.SetTrigger(_isEquipGun ? IsEquipGun : IsUnequipGun);
+                IsEquip ? PlayerMoveComponent.MAX_SPEED / 2 : PlayerMoveComponent.MAX_SPEED;
+            _animator.SetTrigger(IsEquip ? IsEquipGun : IsUnequipGun);
         }
 
         // Aim
-        var isAiming = Input.GetMouseButton(1);
-        _animator.SetBool(IsAiming, isAiming);
-        _pistolRayRenderer.SetLineRendererActive(isAiming);
+        _isAiming = Input.GetMouseButton(1) && IsEquip;
+        _animator.SetBool(IsAiming, _isAiming);
+        _pistolRayRenderer.SetLineRendererActive(_isAiming);
 
-        if (!_isEquipGun) return;
+        if (!IsEquip) return;
 
         // Reload
         if (Input.GetKeyDown(KeyCode.R))
@@ -59,11 +65,11 @@ public class PlayerShootComponent : MonoBehaviour
             PlayerReload();
         }
 
-        if (!isAiming) return;
+        if (!_isAiming) return;
 
         // Shoot
         if (!Input.GetMouseButtonDown(0)) return;
-        
+
         if (_weapon.HasAmmo())
         {
             PlayerShoot();

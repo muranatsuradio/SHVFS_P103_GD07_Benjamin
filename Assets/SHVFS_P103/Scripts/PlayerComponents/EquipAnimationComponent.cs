@@ -10,19 +10,29 @@ public class EquipAnimationComponent : MonoBehaviour
 
     private void Start()
     {
-        OnHandGun.SetActive(false);
-        OnWaistGun.SetActive(true);
+        SetHandGunVisible(false);
     }
 
     public void EquipGun()
     {
-        OnHandGun.SetActive(true);
-        OnWaistGun.SetActive(false);
+        SetHandGunVisible(true);
     }
 
     public void UnequipGun()
     {
-        OnHandGun.SetActive(false);
-        OnWaistGun.SetActive(true);
+        SetHandGunVisible(false);
+    }
+
+    private void SetHandGunVisible(bool isVisible)
+    {
+        var models = GetComponentsInChildren<MeshRenderer>();
+
+        foreach (var model in models)
+        {
+            if (!model) continue;
+            model.enabled = isVisible;
+        }
+
+        OnWaistGun.SetActive(!isVisible);
     }
 }
